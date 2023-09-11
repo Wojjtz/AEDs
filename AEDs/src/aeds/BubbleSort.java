@@ -8,22 +8,19 @@ package aeds;
  *
  * @author 0057149
  */
-public class SelectionSort {
+public class BubbleSort {
+
     public static void main(String[] args) {
-        int menorI, aux;
-        int[] vet = {1,4,5,9,8,3,7};
+        int[] vet = {5,1,2,9,7};
+        int aux;
         
-        for (int i = 0; i < (vet.length - 1); i++) {
-            menorI = i;
-            for (int j = (i + 1); j < vet.length; j++) {
-                if(vet[j] < vet[menorI]){
-                    menorI = j;
+        for (int i = (vet.length - 1); i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if(vet[j] > vet[j+1]){
+                    aux = vet[j];
+                    vet[j] = vet[j+1];
+                    vet[j+1] = aux;
                 }
-            }
-            if(vet[i] != vet[menorI]){
-                aux = vet[i];
-                vet[i] = vet[menorI];
-                vet[menorI] = aux;
             }
         }
         

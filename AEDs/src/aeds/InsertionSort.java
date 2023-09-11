@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author 0057149
  */
-public class ReordenarVetor {
+public class InsertionSort {
 
     /**
      * @param args the command line arguments
