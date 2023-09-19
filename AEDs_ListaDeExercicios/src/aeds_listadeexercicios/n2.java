@@ -14,7 +14,7 @@ public class n2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] vet = {1, 2, 3, 4};
+        int[] vet = {7, 2, 5, 4};
         int maior = encontrarMaior(vet, 0);
 
         System.out.println(maior);
