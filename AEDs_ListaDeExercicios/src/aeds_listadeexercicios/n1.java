@@ -10,17 +10,15 @@ package aeds_listadeexercicios;
  */
 public class n1 {
     public static void main(String[] args) {
-        int vet[] = {1, 2, 3, 4};
-        int start = 0;
+        int vetor[] = {1, 2, 3, 4};
         
-        imprimirVetor(vet, start);
+        imprimirVetor(vetor, 0);
     }
     
-    static void imprimirVetor(int v[], int s){
-        if(s < v.length){
-           System.out.println(v[s]);
-           s++;
-           imprimirVetor(v, s);
+    static void imprimirVetor(int[] vetor, int indice){
+        if(indice < vetor.length){
+           System.out.print(vetor[indice] + " ");
+           imprimirVetor(vetor, indice++);
         }
     }
 }
