@@ -9,7 +9,7 @@ package ListasLineares;
  * @author rodol
  */
 public class Main {
-    static ListaAlunos lista = new ListaAlunos();
+    static Lista lista = new Lista();
     public static void main(String[] args) {
         Aluno a1 = new Aluno("Sam Sulek", 1);
         Aluno a2 = new Aluno("Sérgio Foguetes", 2);

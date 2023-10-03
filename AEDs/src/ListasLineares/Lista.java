@@ -8,13 +8,13 @@ package ListasLineares;
  *
  * @author rodol
  */
-public class ListaAlunos {
+public class Lista {
 
     private final int max = 2;
     private int nAtualAlunos;
     private Aluno[] lista;
 
-    public ListaAlunos() {
+    public Lista() {
         this.lista = new Aluno[max];
     }
 
