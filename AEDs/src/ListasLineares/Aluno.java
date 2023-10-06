@@ -10,12 +10,20 @@ package ListasLineares;
  */
 public class Aluno {
     private String nome;
-    private int ra;
+    private long ra;
     
-    public Aluno(String nome, int ra){
+    public Aluno(String nome, long ra){
         this.nome = nome;
         this.ra = ra;
         
         
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public long getRa() {
+        return this.ra;
     }
 }
