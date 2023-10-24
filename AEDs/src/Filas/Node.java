@@ -32,5 +32,4 @@ public class Node<T> {
         return "No{" + "conteudo=" + conteudo + '}';
     }
     
-    
 }

@@ -47,6 +47,26 @@ public class LinkedList<E> {
         size++;
     }
 
+    public void addInOrder(E object) {
+        if (head == null) {
+            head = new Node<E>(object, null);
+        } else {
+            Node<E> newNode = new Node(object);
+            Node<E> pointer = head;
+
+            if ((int) newNode.conteudo > (int) pointer.conteudo) {
+                newNode.proximo = this.head;
+                this.head = newNode;
+            } else {
+                for (; pointer.proximo != null && (int) newNode.conteudo < (int) pointer.proximo.conteudo; pointer = pointer.proximo) {
+                }
+                newNode.proximo = pointer.proximo;
+                pointer.proximo = newNode;
+            }
+
+        }
+    }
+
     public E remove(E noParaRemover) {
         if (elementExist(noParaRemover)) {
             Node pointer = head;
@@ -120,28 +140,28 @@ public class LinkedList<E> {
         Node currentB = listB.head;
 
         while (currentA != null && currentB != null) {
-            if ((int) currentA.conteudo < (int)currentB.conteudo) {
-                mergedList.append((int)currentA.conteudo);
+            if ((int) currentA.conteudo < (int) currentB.conteudo) {
+                mergedList.append((int) currentA.conteudo);
                 currentA = currentA.proximo;
             } else {
-                mergedList.append((int)currentB.conteudo);
+                mergedList.append((int) currentB.conteudo);
                 currentB = currentB.proximo;
             }
         }
 
         while (currentA != null) {
-            mergedList.append((int)currentA.conteudo);
+            mergedList.append((int) currentA.conteudo);
             currentA = currentA.proximo;
         }
 
         while (currentB != null) {
-            mergedList.append((int)currentB.conteudo);
+            mergedList.append((int) currentB.conteudo);
             currentB = currentB.proximo;
         }
 
         return mergedList;
     }
-    
+
     public void append(int data) {
         Node newNode = new Node(data);
         if (head == null) {
